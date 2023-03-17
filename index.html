@@ -17,6 +17,7 @@
         <div class="container d-flex"> 
             <div class="left-nav">
                 <div class="user-nav d-flex">
+
                     <div class="prof-pic">
                         <img src="img/avatar_1.jpg" class="prof-img"/>
                     </div>
@@ -29,6 +30,34 @@
                     </div>
 
                 </div>
+
+                <div class="d-flex">
+                    <input type="text" class="searchbar" placeholder="cerca tra le chat">
+
+                    <!-- <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div> -->
+                </div>
+
+                <div class="alert d-flex">
+                    <div class="bell-icon">
+                        <i class="fa-regular fa-bell-slash"></i>
+                    </div>
+
+                    <div class="alert-text white-text">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="">Attiva le notifiche</a>
+                    </div>
+                </div>
+
+                <div class="contacts">
+                    <ul>
+                        <li v-for="contact in contacts" :key="contact.name" class="contact">
+                          <span>{{ contact.name }}</span>
+                        </li>
+                      </ul>
+                </div>
+
             </div>
 
             <div class="chat-box">
