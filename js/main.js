@@ -165,8 +165,18 @@ const { createApp } = Vue
           }
           ],
           }
-          ]
-      }
+          ],
+
+          selectedContact: 0
     }
-  }).mount('#app')
+  },
+
+  methods: {
+    selectContact(contact) {
+      this.selectedContact = contact;
+    }
+  }
+  
+
+}).mount('#app')
 
