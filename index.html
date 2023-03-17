@@ -19,7 +19,7 @@
                 <div class="user-nav d-flex">
 
                     <div class="prof-pic">
-                        <img src="img/avatar_1.jpg" class="prof-img"/>
+                        <img src="img/avatar_io.jpg" class="prof-img"/>
                     </div>
                     
                     <div class="nav-icons">
@@ -50,22 +50,40 @@
                     </div>
                 </div>
 
-                <div class="contacts">
+                <div class="contacts m-top-1">
                     <ul>
-                        <li v-for="contact in contacts" :key="contact.name" class="contact">
-                          <span>{{ contact.name }}</span>
+                        <li v-for="contact in contacts" :key="contact.name">
+                            <div class="contact d-flex">
+                                <img :src="contact.avatar" class="contact-prof-pic" />
+                                <span class="contact-name white-text">{{ contact.name }}</span>
+                            </div>                           
                         </li>
                       </ul>
                 </div>
-
             </div>
 
             <div class="chat-box">
+                <header class="chat-header">
 
+                </header>
+
+                <main class="chat-main">
+
+                </main>
+
+                <footer class="chat-footer">
+                    <div class="attachments">
+                        <i class="fa-solid fa-face-laugh-beam m-8"></i>
+                        <i class="fa-solid fa-paperclip m-8"></i>
+                    </div>
+
+                    <input type="text" placeholder="Scrivi un messaggio" class="text-bar">
+
+                    <i class="fa-solid fa-microphone m-right-1"></i>
+                </footer>
             </div>
 
         </div>
-
 
     </div>
 

@@ -9,16 +9,13 @@
 
 :root {
     --main: rgb(32, 44, 51);
+    --my-green: rgb(0, 86, 94);
 }
 
 /********************************************/
 
-.debug .left-nav {
-    border: solid 1px red;
-}
-
 .debug .chat-box {
-    border: solid 1px blue;
+    border-left: solid 1px blue;
 }
 /********************************************/
 
@@ -31,7 +28,6 @@
 
 .left-nav {
     width: 30%;
-    overflow-y: scroll;
 }
 
 .chat-box {
@@ -71,7 +67,7 @@
     width: 95%;
     height: 4.3rem;
     margin-left: 5%;
-    background-color: rgb(0, 86, 94);
+    background-color: var(--my-green);
     align-items: center;
 }
 
@@ -116,8 +112,53 @@ a {
 .contact {
     width: 100%;
     height: 50px;
-    background-color: white;
+    margin-left: 15%;
     margin: 10px;
+}
+
+.contact-name {
+    margin-left: 10px;
+    border-bottom: solid 1px rgba(88, 88, 88, 0.275);
+    width: 100%;
+}
+
+.contact-prof-pic {
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+.chat-header {
+    width: 98%;
+    height: 4rem;
+    background-color: var(--main);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-main {
+    width: 100%;
+    height: calc((100vh - 4rem) - 7rem);
+}
+
+.chat-footer {
+    width: 98%;
+    height: 4.5rem;
+    background-color: var(--main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.7rem;
+    color: red;
+}
+
+.chat-footer i {
+    color: var(--my-green);
+    cursor: pointer;
+}
+
+.attachments {
+    margin: 0 1rem;
 }
 
 /********************************************/
@@ -130,8 +171,23 @@ a {
     color: white;
 }
 
+.m-8 {
+    margin: 8px;
+}
+
+.m-right-1 {
+    margin-right: 1rem;
+}
+
+.m-top-1 {
+    margin-top: 1rem;
+}
+
 /********************************************/
 
-
+.contact:hover {
+    cursor: pointer;
+    /*background-color: var(--my-green);*/
+}
 
 /********************************************/
