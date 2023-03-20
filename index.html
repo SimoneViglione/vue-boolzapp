@@ -22,7 +22,7 @@
                         <img src="img/avatar_io.jpg" class="prof-img"/>
                     </div>
                     
-                    <div class="nav-icons">
+                    <div class="nav-icons d-flex">
                         <i class="fa-solid fa-user-group"></i>
                         <i class="fa-solid fa-circle-notch"></i>
                         <i class="fa-solid fa-message"></i>
@@ -62,13 +62,17 @@
                 <header class="chat-header d-flex">
                     
                         <img :src="selectedContact.avatar" class="contact-prof-pic" />
-                        <span class="chat-box-name">{{ selectedContact.name }}</span>
+                        <div>
+                            <span class="chat-box-name white-text">{{ selectedContact.name }}</span>
+                            
+                        </div>
+                        
                     
                 </header>
 
                 <main class="chat-main">
-                    <div v-for="message in selectedContact.messages" :key="message.id" class="contact-message">
-
+                    <div v-for="message in selectedContact.messages" :key="message" :class="{ 'message': true, 'sent': message.status === 'sent', 'received': message.status === 'received' }">
+                        {{ selectedContact.messages.message }}
                     </div>
                 </main>
 

@@ -9,7 +9,8 @@
 
 :root {
     --main: rgb(32, 44, 51);
-    --my-green: rgb(0, 86, 94);
+    --secondary: rgb(0, 86, 94);
+    --tertiary: rgb(111, 0, 255);
 }
 
 /********************************************/
@@ -56,18 +57,16 @@
 
 .nav-icons {
     color: rgb(174, 186, 193);
-}
-
-.nav-icons i {
-    margin: 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+    width: 200px;
 }
 
 .alert {
     width: 95%;
     height: 4.3rem;
     margin-left: 5%;
-    background-color: var(--my-green);
+    background-color: var(--secondary);
     align-items: center;
 }
 
@@ -78,7 +77,7 @@
 }
 
 .bell-icon i {
-    color: rgb(111, 0, 255);
+    color: var(--tertiary);
     font-size: 1.3rem;
     padding: 10px 8px;
 }
@@ -159,7 +158,7 @@ a {
 }
 
 .chat-footer i {
-    color: var(--my-green);
+    color: var(--secondary);
     cursor: pointer;
 }
 
@@ -177,13 +176,14 @@ a {
     color: rgba(220, 220, 220, 0.582);
 }
 
-.user-message {
-    background-color: var(--my-green);
+.sent {
+    background-color: var(--secondary);
     padding: 10px;
     border-radius: 5px;
+    max-width: max-content;
 }
 
-.contact-message {
+.received {
     background-color: rgba(55, 0, 126, 0.725);
     padding: 10px;
     border-radius: 5px;
@@ -191,13 +191,8 @@ a {
 }
 
 .chat-box-name {
-    color: white;
     align-self: center;
     margin-left: 1rem;
-}
-
-.chat-box-prof-pic {
-    align-self: center;
 }
 
 /********************************************/
