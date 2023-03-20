@@ -1,3 +1,5 @@
+const DateTime = luxon.DateTime;
+
 const { createApp } = Vue
 
   createApp({
@@ -194,7 +196,12 @@ const { createApp } = Vue
         };
         this.selectedContact.messages.push(textReceived);
       }, 1000);
-    }
-  }
+    },
+
+    getFormattedTime(dateString) {
+      const date = DateTime.fromFormat(dateString, 'dd/MM/yyyy HH:mm:ss');
+      return date.toFormat('HH:mm');
+    },
+  },
 }).mount('#app')
 
