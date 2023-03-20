@@ -70,9 +70,9 @@
                     
                 </header>
 
-                <main class="chat-main">
+                <main class="chat-main d-flex">
                     <div v-for="message in selectedContact.messages" :key="message" :class="{ 'message': true, 'sent': message.status === 'sent', 'received': message.status === 'received' }">
-                        {{ selectedContact.messages.message }}
+                        {{ message.message }}
                     </div>
                 </main>
 
