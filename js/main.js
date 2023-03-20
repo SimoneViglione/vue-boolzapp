@@ -184,7 +184,16 @@ const { createApp } = Vue
         message: this.textSent,
         status: 'sent',
       })
-      this.textSent=''
+      this.textSent='';
+
+      setTimeout(() => {
+        const textReceived = {
+          message: 'ok',
+          status: 'received',
+          date: currentDate 
+        };
+        this.selectedContact.messages.push(textReceived);
+      }, 1000);
     }
   }
 }).mount('#app')
