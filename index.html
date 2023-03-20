@@ -71,7 +71,7 @@
                 </header>
 
                 <main class="chat-main d-flex">
-                    <div v-for="message in selectedContact.messages" :key="message" :class="{ 'message': true, 'sent': message.status === 'sent', 'received': message.status === 'received' }">
+                    <div v-for="message in selectedContact.messages" :key="message" :class="{ 'message': true, 'sent': message.status === 'sent', 'received': message.status === 'received',  }">
                         <span>{{ message.message }}</span>
                         <div class="text-date"> {{ new Date(message.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }} </div>
                     </div>
@@ -83,7 +83,7 @@
                         <i class="fa-solid fa-paperclip m-8"></i>
                     </div>
 
-                    <input type="text" placeholder="Scrivi un messaggio" class="text-bar">
+                    <input type="text" placeholder="Scrivi un messaggio" class="text-bar" v-model="textSent" @keyup.enter="sendText">
 
                     <i class="fa-solid fa-microphone m-right-1"></i>
                 </footer>

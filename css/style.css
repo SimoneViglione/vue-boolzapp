@@ -174,29 +174,27 @@ a {
     color: rgba(220, 220, 220, 0.582);
 }
 
-.sent {
-    background-color: var(--secondary);
-    padding: 10px;
-    border-radius: 5px;
-    max-width: max-content;
-    align-self: flex-end;
-    margin: 2px 0;
-    margin-right: 2rem;
-    color: white;
-}
-
-.sent:first-child {
-    margin-top: 1rem;
-}
-
-.received {
-    background-color: rgba(55, 0, 126, 0.725);
+.message {
     padding: 10px;
     border-radius: 5px;
     max-width: max-content;
     margin: 5px 0;
-    margin-left: 2rem;
     color: white;
+}
+
+.sent {
+    background-color: var(--secondary);
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+.message:first-child {
+    margin-top: 1rem;
+}
+
+.received {
+    background-color: var(--tertiary);
+    margin-left: 2rem;
 }
 
 .chat-box-name {

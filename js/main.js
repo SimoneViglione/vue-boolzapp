@@ -32,11 +32,11 @@ const { createApp } = Vue
           visible: true,
           messages: [
           {
-          date: '20/03/2020 16:30:00',
+          date: '20/03/2020 16:30:00',            
           message: 'Ciao come stai?',
           status: 'sent'
           },
-          {
+          { 
           date: '20/03/2020 16:30:55',
           message: 'Bene grazie! Stasera ci vediamo?',
           status: 'received'
@@ -51,7 +51,7 @@ const { createApp } = Vue
           {
           name: 'Samuele',
           avatar: './img/avatar_3.jpg',
-          visible: true,
+          visible: true,  
           messages: [
           {
           date: '28/03/2020 10:10:40',
@@ -176,6 +176,14 @@ const { createApp } = Vue
     selectContact(contact) {
       this.selectedContact = contact;
     }, 
+
+    sendText() {
+      this.selectedContact.messages.push({
+        message: this.textSent,
+        status: 'sent',
+      })
+      this.textSent=''
+    }
   }
 }).mount('#app')
 
