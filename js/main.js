@@ -178,7 +178,9 @@ const { createApp } = Vue
     }, 
 
     sendText() {
+      const currentDate = new Date();
       this.selectedContact.messages.push({
+        date: currentDate,
         message: this.textSent,
         status: 'sent',
       })
