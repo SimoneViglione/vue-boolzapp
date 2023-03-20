@@ -105,7 +105,7 @@ a {
 }
 
 .contact {
-    width: 100%;
+    width: 90%;
     height: 50px;
     margin-left: 15%;
     margin: 10px;
@@ -180,8 +180,13 @@ a {
     border-radius: 5px;
     max-width: max-content;
     align-self: flex-end;
-    margin: 1rem 2rem;
+    margin: 2px 0;
+    margin-right: 2rem;
     color: white;
+}
+
+.sent:first-child {
+    margin-top: 1rem;
 }
 
 .received {
@@ -189,13 +194,24 @@ a {
     padding: 10px;
     border-radius: 5px;
     max-width: max-content;
-    margin: 1rem 2rem;
+    margin: 5px 0;
+    margin-left: 2rem;
     color: white;
 }
 
 .chat-box-name {
     align-self: center;
     margin-left: 1rem;
+}
+
+.text-date {
+    font-size: 10px;
+    color: rgba(205, 205, 205, 0.679);
+    text-align: right;
+}
+
+li {
+    list-style: none;
 }
 
 /********************************************/

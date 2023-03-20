@@ -167,16 +167,15 @@ const { createApp } = Vue
           }
           ],
 
-          selectedContact: 0
+        selectedContact: 0,
+
     }
   },
 
   methods: {
     selectContact(contact) {
       this.selectedContact = contact;
-    }
+    }, 
   }
-  
-
 }).mount('#app')
 
