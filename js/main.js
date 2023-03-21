@@ -169,9 +169,17 @@ const { createApp } = Vue
 
         selectedContact: 0,
         textSent: '',
-
+        searchQuery: ''
     }
   },
+
+  computed: {
+  filteredContacts() {
+    return this.contacts.filter(contact => {
+      return contact.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+    })
+  }
+},
 
   methods: {
     selectContact(contact) {
