@@ -142,6 +142,7 @@ a {
     background-image: url(../img/sfondo.jpg);
     background-size: contain;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .chat-footer {
@@ -204,7 +205,7 @@ a {
 
 .text-date {
     font-size: 10px;
-    color: rgba(205, 205, 205, 0.679);
+    color: rgba(205, 205, 205, 0.828);
     text-align: right;
 }
 

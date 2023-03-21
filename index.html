@@ -49,7 +49,7 @@
                 <div class="contacts m-top-1">
                     <ul>
                         <li v-for="contact in contacts" :key="contact.name">
-                            <div class="contact d-flex" @click="selectContact(contact)">
+                            <div class="contact d-flex"  @click="selectContact(contact)">
                                 <img :src="contact.avatar" class="contact-prof-pic" />
                                 <span class="contact-name white-text">{{ contact.name }}</span>
                             </div>                           
@@ -61,19 +61,17 @@
             <div class="chat-box">
                 <header class="chat-header d-flex">
                     
-                        <img :src="selectedContact.avatar" class="contact-prof-pic" />
-                        <div>
-                            <span class="chat-box-name white-text">{{ selectedContact.name }}</span>
-                            
-                        </div>
+                    <img :src="selectedContact.avatar" class="contact-prof-pic" />
+                    <div>
+                        <span class="chat-box-name white-text">{{ selectedContact.name }}</span>
+                    </div>
                         
-                    
                 </header>
 
                 <main class="chat-main d-flex">
                     <div v-for="message in selectedContact.messages" :key="message" :class="{ 'message': true, 'sent': message.status === 'sent', 'received': message.status === 'received',  }">
                         <span>{{ message.message }}</span>
-                        <div class="text-date"> {{ getFormattedTime(message.date) }} </div>  
+                        <div class="text-date"> {{ message.date }} </div>  
                             
                     </div>
                 </main>
@@ -96,7 +94,6 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="text/javascript" src="js/main.js"></script> 
 </body>
